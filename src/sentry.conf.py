@@ -19,8 +19,8 @@ else:
     POSTGRES_DBNAME='postgres'
     POSTGRES_USER='postgres'
     POSTGRES_PASSWORD='123'
-    POSTGRES_HOST=os.environ['POSTGRES_PORT_5432_TCP_ADDR']
-    POSTGRES_PORT=os.environ['POSTGRES_PORT_5432_TCP_PORT']
+    POSTGRES_HOST=os.environ['MYSQL_PORT_3306_TCP_ADDR']
+    POSTGRES_PORT=os.environ['MYSQL_PORT_3306_TCP_PORT']
 
 if 'REDIS_URL' in os.environ:
     redisUrl = urlparse(os.environ['REDIS_URL'])
@@ -38,7 +38,7 @@ DATABASES = {
 
         # If you change this, you'll also need to install the appropriate python
         # package: psycopg2 (Postgres) or mysql-python
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.mysql',
 
         'NAME': POSTGRES_DBNAME,
         'USER': POSTGRES_USER,

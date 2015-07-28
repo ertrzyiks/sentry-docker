@@ -1,2 +1,2 @@
-sentry[postgres]==7.6
+sentry[mysql]==7.6
 psycopg2

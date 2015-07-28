@@ -1,7 +1,7 @@
 web:
   build: .
   links:
-    - postgres
+    - mysql
     - redis
   environment:
    - BASE_URL=http://192.168.59.103:8083
@@ -10,10 +10,13 @@ web:
   ports:
     - "8083:80"
 
-postgres:
-  image: postgres:9.4
+mysql:
+  image: mysql:5.6
   environment:
-   - POSTGRES_PASSWORD=123
+   - MYSQL_DATABASE=postgres
+   - MYSQL_USER=postgres
+   - MYSQL_PASSWORD=123
+   - MYSQL_ROOT_PASSWORD=123
 
 redis:
   image: redis:latest
