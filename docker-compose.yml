@@ -1,0 +1,19 @@
+web:
+  build: .
+  links:
+    - postgres
+    - redis
+  environment:
+   - BASE_URL=http://192.168.59.103:8082
+  volumes:
+      - ./src:/var/www/sentry/src
+  ports:
+    - "8083:80"
+
+postgres:
+  image: postgres:9.4
+  environment:
+   - POSTGRES_PASSWORD=123
+
+redis:
+  image: redis:latest

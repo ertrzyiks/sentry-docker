@@ -1,0 +1,2 @@
+sentry[postgres]==7.6
+psycopg2
