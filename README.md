@@ -7,7 +7,7 @@ docker-compose up -d
 After first deploy run in container:
 
 ```
-sentry upgrade --no-input
+sentry upgrade --noinput
 sentry createuser --email=<email> --no-input --no-password --superuser
 ```
 
